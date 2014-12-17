@@ -17,5 +17,8 @@ shinyServer(
                                 "wt"=input$wt, 
                                 "am"=0)
                         predict(lmfit, new_data)})
+                output$table <- renderDataTable({
+                        mtcars
+                }, options=list(pageLength=10))
         }
 )
