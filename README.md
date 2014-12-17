@@ -2,7 +2,15 @@ Fuel consumption prediction (miles per galon)
 --------------------------------------------------
 --------------------------------------------------
 
-Note: prediction is based on mtcars datasets (Motor Trend Car Road Tests). Original dataset contains 10 predictors but after ANOVA test, 4 of them was used: cyl, wt, disp and am. For more information, please check
+The application will give you prediction of fuel consumption based on Motor Trend Car Road Tests dataset and linear model.
+Run this application by submitting your values such as: 
+- Number of cylinders
+- Displacement (cu.in.)
+- Gross horsepower
+- Weight (lb/1000)
+- Transmission (auto/manual)
+
+Note: Original dataset contains 10 predictors but after ANOVA test, 4 of them was used: cyl, wt, disp and am. For more information, please check
 
 Motor Trend Car Road Tests
 --------------------------------------------------

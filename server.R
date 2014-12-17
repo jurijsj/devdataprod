@@ -8,14 +8,19 @@ shinyServer(
                 output$cyl <- renderPrint({input$cyl})
                 output$disp <- renderPrint({input$disp})
                 output$wt <- renderPrint({input$wt})
-                output$am <- renderPrint({input$am})
+                output$am <- renderPrint({
+                        if(input$am == '1'){
+                                'Manual'
+                        }else{
+                                'Automatic'
+                        }})
                 output$pred <- renderPrint({
                         new_data <-data.frame(
                                 "cyl"=input$cyl,
                                 "disp"=input$disp, 
                                 "hp"=input$hp, 
                                 "wt"=input$wt, 
-                                "am"=0)
+                                "am"=as.numeric(input$am))
                         predict(lmfit, new_data)})
                 output$table <- renderDataTable({
                         mtcars
